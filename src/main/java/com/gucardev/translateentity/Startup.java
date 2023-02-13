@@ -22,8 +22,7 @@ public class Startup implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
 
-    Language tr =
-        languageService.create(Language.builder().slug("tr").detail("Turkish").build());
+    Language tr = languageService.create(Language.builder().slug("tr").detail("Turkish").build());
     Language en =
         languageService.create(Language.builder().slug("en_US").detail("English").build());
 
@@ -36,6 +35,13 @@ public class Startup implements CommandLineRunner {
     englishTranslation.setQuestion("Question in English");
     englishTranslation.setQuestionDetail("Question detail in English");
     englishTranslation.setQuestionAnswer("Question answer in English");
+
+    FAQTranslation englishTranslation2 = new FAQTranslation();
+    englishTranslation2.setFaq(faq2);
+    englishTranslation2.setLanguage(en);
+    englishTranslation2.setQuestion("Question2 in English");
+    englishTranslation2.setQuestionDetail("Question2 detail in English");
+    englishTranslation2.setQuestionAnswer("Question2 answer in English");
 
     FAQTranslation turkishTranslation = new FAQTranslation();
     turkishTranslation.setFaq(faq);
@@ -53,7 +59,8 @@ public class Startup implements CommandLineRunner {
 
     faqService.addToTranslation(faq, englishTranslation);
     faqService.addToTranslation(faq, turkishTranslation);
-    // faqService.addToTranslation(faq2, turkishTranslation2);
+    faqService.addToTranslation(faq2, englishTranslation2);
+    faqService.addToTranslation(faq2, turkishTranslation2);
 
     log.info("list: {}", faqService.getByLanguage(tr).toString());
 
