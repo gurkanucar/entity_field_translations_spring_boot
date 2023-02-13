@@ -15,25 +15,25 @@ default lang is: en_US
 | :-------- | :------- | :------------------------- |
 | `lang` | `string` |  Your language slug |
 
-Response
+Response (brings FAQ list by given language slug parameter)
 
 ```json
 [
   {
-    "id": 1,
+    "id": 2,
     "faqId": 1,
-    "languageId": 2,
-    "question": "Question in English",
-    "questionDetail": "Question detail in English",
-    "questionAnswer": "Question answer in English"
+    "languageId": 1,
+    "question": "Question in Turkish",
+    "questionDetail": "Question detail in Turkish",
+    "questionAnswer": "Question answer in Turkish"
   },
   {
-    "id": 3,
+    "id": 4,
     "faqId": 2,
-    "languageId": 2,
-    "question": "Question2 in English",
-    "questionDetail": "Question2 detail in English",
-    "questionAnswer": "Question2 answer in English"
+    "languageId": 1,
+    "question": "Question2 in Turkish",
+    "questionDetail": "Question2 detail in Turkish",
+    "questionAnswer": "Question2 answer in Turkish"
   }
 ]
 ```
@@ -46,9 +46,10 @@ default lang is: en_US
   GET /faq/translation/2?lang=tr
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `lang` | `string` |  Your language slug |
+| Parameter           | Type     | Description        |
+|:--------------------|:---------|:-------------------|
+| `lang`              | `string` | Your language slug |
+| `FAQ id` | `long`   | id                 |
 
 Response
 
@@ -74,6 +75,7 @@ default lang is: en_US
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `lang` | `string` |  Your language slug |
+| `FAQ id` | `long`   | id                 |
 
 Response (brings all translations of FAQ by given id)
 

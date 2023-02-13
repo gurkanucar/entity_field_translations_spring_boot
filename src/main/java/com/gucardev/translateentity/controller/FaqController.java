@@ -1,7 +1,7 @@
 package com.gucardev.translateentity.controller;
 
-import com.gucardev.translateentity.dto.FAQTranslationDTO;
 import com.gucardev.translateentity.dto.FAQProjection;
+import com.gucardev.translateentity.dto.FAQTranslationDTO;
 import com.gucardev.translateentity.service.FAQService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

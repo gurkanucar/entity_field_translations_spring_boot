@@ -1,7 +1,7 @@
 package com.gucardev.translateentity.service;
 
-import com.gucardev.translateentity.dto.FAQTranslationDTO;
 import com.gucardev.translateentity.dto.FAQProjection;
+import com.gucardev.translateentity.dto.FAQTranslationDTO;
 import com.gucardev.translateentity.model.FAQ;
 import com.gucardev.translateentity.model.FAQTranslation;
 import com.gucardev.translateentity.model.Language;
@@ -25,7 +25,6 @@ public class FAQService {
 
   public List<FAQProjection> getFaqById(Long id) {
     return faqRepository.findFaqByIdAndBringWithOtherFields(id);
-    // .orElseThrow(() -> new RuntimeException("FAQ Translation not found!"));
   }
 
   public List<FAQTranslationDTO> getByLanguage(String languageSlug) {

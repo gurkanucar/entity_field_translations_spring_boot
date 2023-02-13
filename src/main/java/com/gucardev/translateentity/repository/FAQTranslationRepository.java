@@ -13,6 +13,4 @@ public interface FAQTranslationRepository extends JpaRepository<FAQTranslation, 
   List<FAQTranslation> findByLanguage(Language language);
 
   Optional<FAQTranslation> findByFaqIdAndLanguage(Long id, Language language);
-
-
 }

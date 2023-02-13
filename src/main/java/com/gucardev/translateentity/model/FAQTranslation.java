@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,9 +20,6 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @Table(name = "faq_translation")
 @Builder
-@NamedQuery(
-    name = "FAQTranslation.findByLanguage",
-    query = "SELECT ft FROM FAQTranslation ft WHERE ft.language = :language")
 public class FAQTranslation {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
