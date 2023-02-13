@@ -22,7 +22,7 @@ public class CustomFAQRepositoryImpl implements CustomFAQRepository {
         entityManager
             .createNativeQuery(
                 "  SELECT\n"
-                    + "    FAQ.id as id,\n"
+                    + "    FAQ_TRANSLATION.id as id,\n"
                     + "    FAQ_TRANSLATION.QUESTION as question,\n"
                     + "    FAQ_TRANSLATION.QUESTION_ANSWER as questionAnswer,\n"
                     + "    FAQ_TRANSLATION.QUESTION_DETAIL as questionDetail,\n"
